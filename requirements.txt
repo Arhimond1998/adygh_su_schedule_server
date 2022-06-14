@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+fastapi-utils
+beautifulsoup4
+httpx
+Pillow
+PyMuPDF
