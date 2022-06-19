@@ -263,6 +263,9 @@ def get_schedule_for_course_from_cropped(cropped_files):
                 if line_reach_vertical[i] == 0:
                     break
                 top_fragment = course_schedule.crop((0, 0, course_schedule.size[0] - 1, line_reach_vertical[0]))
+                for x in range(top_fragment.size[0]):
+                    top_fragment.putpixel((x, top_fragment.size[1] - 1), (0, 0, 0))
+
                 start_y = line_reach_vertical[i - 1]
                 end_y = line_reach_vertical[i]
                 main_fragment = course_schedule.crop((0, start_y, course_schedule.size[0] - 1, end_y))
